@@ -1,0 +1,513 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "ControleGastosResidencial",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/Categoria/GetCategorias": {
+      "get": {
+        "tags": [
+          "Categoria"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CategoriaModelListApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CategoriaModelListApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CategoriaModelListApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Categoria/CreateCategoria": {
+      "post": {
+        "tags": [
+          "Categoria"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CategoriaModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CategoriaModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CategoriaModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CategoriaModelListApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CategoriaModelListApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CategoriaModelListApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Categoria/GetRelatorioTotaisPorCategoria": {
+      "get": {
+        "tags": [
+          "Categoria"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Pessoa/GetPessoas": {
+      "get": {
+        "tags": [
+          "Pessoa"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PessoaModelListApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PessoaModelListApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PessoaModelListApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Pessoa/CreatePessoa": {
+      "post": {
+        "tags": [
+          "Pessoa"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PessoaModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PessoaModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PessoaModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PessoaModelListApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PessoaModelListApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PessoaModelListApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Pessoa/DeletePessoa/{id}": {
+      "delete": {
+        "tags": [
+          "Pessoa"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PessoaModelApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PessoaModelApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PessoaModelApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Pessoa/GetRelatorioTotaisPorPessoa": {
+      "get": {
+        "tags": [
+          "Pessoa"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Transacao/GetTransacoes": {
+      "get": {
+        "tags": [
+          "Transacao"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/TransacaoModelListApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TransacaoModelListApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TransacaoModelListApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Transacao/CreateTransacao": {
+      "post": {
+        "tags": [
+          "Transacao"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TransacaoModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TransacaoModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TransacaoModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/TransacaoModelListApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TransacaoModelListApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TransacaoModelListApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CategoriaModel": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "descricao": {
+            "type": "string",
+            "nullable": true
+          },
+          "finalidade": {
+            "$ref": "#/components/schemas/FinalidadeCategoriaEnum"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CategoriaModelListApiResponse": {
+        "type": "object",
+        "properties": {
+          "objeto": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CategoriaModel"
+            },
+            "nullable": true
+          },
+          "menssagem": {
+            "type": "string",
+            "nullable": true
+          },
+          "sucesso": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "FinalidadeCategoriaEnum": {
+        "enum": [
+          "Despesa",
+          "Receita",
+          "Ambas"
+        ],
+        "type": "string"
+      },
+      "ObjectApiResponse": {
+        "type": "object",
+        "properties": {
+          "objeto": {
+            "nullable": true
+          },
+          "menssagem": {
+            "type": "string",
+            "nullable": true
+          },
+          "sucesso": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PessoaModel": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nome": {
+            "type": "string",
+            "nullable": true
+          },
+          "idade": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PessoaModelApiResponse": {
+        "type": "object",
+        "properties": {
+          "objeto": {
+            "$ref": "#/components/schemas/PessoaModel"
+          },
+          "menssagem": {
+            "type": "string",
+            "nullable": true
+          },
+          "sucesso": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PessoaModelListApiResponse": {
+        "type": "object",
+        "properties": {
+          "objeto": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PessoaModel"
+            },
+            "nullable": true
+          },
+          "menssagem": {
+            "type": "string",
+            "nullable": true
+          },
+          "sucesso": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "TipoTransacaoEnum": {
+        "enum": [
+          "Despesa",
+          "Receita"
+        ],
+        "type": "string"
+      },
+      "TransacaoModel": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "descricao": {
+            "type": "string",
+            "nullable": true
+          },
+          "valor": {
+            "type": "number",
+            "format": "double"
+          },
+          "tipo": {
+            "$ref": "#/components/schemas/TipoTransacaoEnum"
+          },
+          "idCategoria": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "idPessoa": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "TransacaoModelListApiResponse": {
+        "type": "object",
+        "properties": {
+          "objeto": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TransacaoModel"
+            },
+            "nullable": true
+          },
+          "menssagem": {
+            "type": "string",
+            "nullable": true
+          },
+          "sucesso": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}
